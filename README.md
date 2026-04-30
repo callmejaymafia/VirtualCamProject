@@ -88,7 +88,7 @@ Your video will appear as your webcam.
 ## 🚀 Clone the Project
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/VirtualCamProject.git
+git clone https://github.com/callmejaymafia/VirtualCamProject.git
 cd VirtualCamProject
 pip install -r requirements.txt
 python main.py
