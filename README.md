@@ -1,6 +1,9 @@
 # 🎥 Virtual Camera Video Call Project
 
-This project streams a pre-recorded video as a webcam using **OBS Virtual Camera**. It allows the video to appear as your camera in Zoom, Google Meet, Teams, and similar apps.
+This project streams any pre-recorded video as a webcam using **OBS Virtual Camera**.  
+The video appears as your camera in Zoom, Google Meet, Microsoft Teams, and similar apps.
+
+> ✨ The app now allows users to **choose any video file at startup**.
 
 ---
 
@@ -9,7 +12,7 @@ This project streams a pre-recorded video as a webcam using **OBS Virtual Camera
 - Python 3.9+
 - OBS Studio (Virtual Camera enabled)
 
-Install Python libraries:
+Install libraries:
 
 ```bash
 pip install -r requirements.txt
@@ -38,24 +41,15 @@ VirtualCamProject/
 │
 ├── output/
 │   └── virtual_camera.py
-│
-└── assets/
-    └── videos/
-        └── presentation.mp4
 ```
 
 ---
 
 ## ⚙️ Setup
 
-1. Install **OBS Studio** and start the Virtual Camera once.
-2. Place your video file in:
-
-```
-assets/videos/presentation.mp4
-```
-
-> **Recommended format:** Portrait — `720x1280` or `1080x1920`
+1. Install **OBS Studio**
+2. Open OBS once and click **Start Virtual Camera**, then close OBS.  
+   > This installs the virtual webcam driver required by the app.
 
 ---
 
@@ -65,27 +59,35 @@ assets/videos/presentation.mp4
 python main.py
 ```
 
-You should see:
+**What happens next:**
+
+1. A file picker window opens
+2. Select any video file (`mp4` recommended)
+3. The virtual camera starts automatically
+
+**Expected terminal output:**
 
 ```
 Virtual camera started: OBS Virtual Camera
 ```
 
+> Press **Q** to exit.
+
 ---
 
 ## 📹 Use in Video Call Apps
 
-Open **Zoom / Meet / Teams** and set the camera to:
+Open **Zoom / Google Meet / Microsoft Teams** and set your camera to:
 
 ```
 OBS Virtual Camera
 ```
 
-Your video will appear as your webcam.
+Your selected video will appear as your webcam.
 
 ---
 
-## 🚀 Clone the Project
+## 🚀 Clone and Run
 
 ```bash
 git clone https://github.com/callmejaymafia/VirtualCamProject.git
@@ -93,3 +95,11 @@ cd VirtualCamProject
 pip install -r requirements.txt
 python main.py
 ```
+
+---
+
+## 📝 Notes
+
+- Recommended video format: portrait (`720x1280` or `1080x1920`)
+- Works best with **Telegram**, **Zoom**, **Google Meet**, **Microsoft Teams**, **Discord**, and **Skype**
+- ⚠️ Some apps (e.g., WhatsApp Desktop/Web) do not support virtual cameras
